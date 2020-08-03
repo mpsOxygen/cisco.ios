@@ -329,6 +329,8 @@ def normalize_interface(name):
         if_type = "loopback"
     elif name.lower().startswith("po"):
         if_type = "Port-channel"
+     elif name.lower().startswith("tu"):
+        if_type = "Tunnel"
     elif name.lower().startswith("nv"):
         if_type = "nve"
     elif name.lower().startswith("twe"):
@@ -374,6 +376,8 @@ def get_interface_type(interface):
         return "loopback"
     elif interface.upper().startswith("PO"):
         return "Port-channel"
+    elif name.lower().startswith("TU"):
+        return "Tunnel"
     elif interface.upper().startswith("NV"):
         return "nve"
     elif interface.upper().startswith("TWE"):
